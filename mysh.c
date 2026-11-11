@@ -9,10 +9,6 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-/* For class project input, read exactly through newline before executing.
- * Reading one byte at a time deliberately avoids consuming later commands.
- * Returns 1 for a line, 0 for EOF, -1 for read/allocation failure.
- */
 static int read_line(int fd, char **line, size_t *capacity) {
     size_t length = 0;
     for (;;) {
