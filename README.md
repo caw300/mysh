@@ -1,9 +1,9 @@
-# CS 214 Project III — mysh (PARTIAL IMPLEMENTATION)
+# CS 214 Project III — mysh
 
-Partners: **ADD BOTH NAMES AND NETIDs BEFORE SUBMISSION**
+Partners: caw300
 Due: November 11, 2026, 11:59 PM ET
 
-## Current implementation (Partner A)
+## Current implementation 
 - `mysh.c`: unified interactive/batch input loop using POSIX `read()`; reads only through the next newline.
 - Optional script file argument; terminal detection with `isatty()`; interactive prompt showing `~` for paths under `HOME`, welcome/goodbye.
 - Parsing of whitespace-delimited tokens, inline comments beginning with `#`, empty lines.
@@ -11,7 +11,7 @@ Due: November 11, 2026, 11:59 PM ET
 - Fixed path search order for `which`: `/usr/local/bin`, `/usr/bin`, `/bin`.
 - Basic test runner `test_basic.sh`.
 
-## Remaining work (Partner B)
+## Remaining work
 Replace the stub in `execute.c`, implementing `execute_job` per `mysh.h`:
 1. Execute external programs with `fork()`, `execv()`, and `waitpid()`; implement program lookup using the three required directories. Do not use `execvp`.
 2. Implement wildcard expansion (`*`) of argument tokens, including path-prefix patterns, hidden-file matching rule, and pass-through of unmatched patterns.
